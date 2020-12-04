@@ -43,7 +43,10 @@ rm -rf wpconfig
 cd /tmp
 sudo wget https://codesharp.hu/custom-nginxlight.zip
 unzip custom-nginxlight.zip
-sudo dpkg -i *.deb
+apt install ./*.deb
+mkdir -p /var/ngx_pagespeed_cache
+chown -R www-data:www-data /var/ngx_pagespeed_cache
+
 
 wget https://github.com/gnif/mod_rpaf/archive/stable.zip
 unzip stable.zip
